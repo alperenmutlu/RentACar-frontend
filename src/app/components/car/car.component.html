@@ -1,0 +1,22 @@
+
+<h2  class="fw-bold bg-dark text-white border border-info">Arabalar</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Marka</th>
+            <th>Renk</th>
+            <th>Model Yılı</th>
+            <th>Fiyat</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let carDto of carDtos" >
+        <td>{{carDto.carId}}</td>
+        <td>{{carDto.brandName}}</td>
+        <td>{{carDto.colorName}}</td>
+        <td>{{carDto.modelYear}}</td>
+        <td>{{carDto.dailyPrice}}</td>
+        <td>{{carDto.description}}</td>
+    </tr>
+</table>

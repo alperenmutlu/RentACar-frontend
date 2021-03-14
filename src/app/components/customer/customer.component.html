@@ -1,0 +1,18 @@
+<h2  class="fw-bold bg-dark text-white border border-info">Customers</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Şirket Adı</th>
+            <th>Email</th>
+          </tr>
+    </thead>
+
+    <tr *ngFor="let customerDto of customerDtos">
+      <td>{{ customerDto.firstName }}</td>
+      <td>{{ customerDto.lastName }}</td>
+      <td>{{ customerDto.customerName }}</td>
+      <td>{{ customerDto.email }}</td>
+    </tr>
+</table>
