@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "82b4100a-5033-4988-8eef-4882188fa036"
+    "analytics": "051bffc2-a07d-49f3-8c71-588af646d470"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rentacar-frontend": {
+    "recap-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rentacar-frontend",
+            "outputPath": "dist/recap-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,10 +31,15 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "./node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -69,18 +74,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rentacar-frontend:build"
+            "browserTarget": "recap-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rentacar-frontend:build:production"
+              "browserTarget": "recap-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rentacar-frontend:build"
+            "browserTarget": "recap-project:build"
           }
         },
         "test": {
@@ -117,16 +122,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rentacar-frontend:serve"
+            "devServerTarget": "recap-project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "rentacar-frontend:serve:production"
+              "devServerTarget": "recap-project:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "rentacar-frontend"
+  "defaultProject": "recap-project"
 }
